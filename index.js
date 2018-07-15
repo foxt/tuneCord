@@ -57,7 +57,6 @@ rpc.on('ready', async () => {
 async function setActivity() {
 
     var playing = await runOSA('tell application "iTunes" to get player state')
-    console.log(rpc)
     if (playing == "playing") { 
         if (!loggedIn) {
             rpc.login("404277856525352974").catch(console.error);
