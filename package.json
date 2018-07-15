@@ -1,0 +1,31 @@
+{
+  "name": "tunecord",
+  "version": "1.0.0",
+  "description": "Tells all your Discord friends what you're listening to on iTunes. (Darwin only)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thelmgn/tunecord.git"
+  },
+  "keywords": [
+    "itunes",
+    "darwin",
+    "macos",
+    "disord",
+    "richpresense"
+  ],
+  "author": "theLMGN",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/thelmgn/tunecord/issues"
+  },
+  "homepage": "https://github.com/thelmgn/tunecord#readme",
+  "dependencies": {
+    "applescript": "^1.0.0",
+    "discord-rpc": "^3.0.0-beta.12",
+    "discord.js": "^11.3.2"
+  }
+}
