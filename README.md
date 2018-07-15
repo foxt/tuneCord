@@ -17,6 +17,7 @@ Tells all your Discord friends what you're listening to on iTunes. (Darwin only)
 7. Press enter
 8. Type `chmod +x ./start.sh`
 9. Type `./start.sh`
-10. If all is well and you've got music playing on iTunes, you should see it on your profile.
+- If all is well and you've got music playing on iTunes, you should see it on your profile.
+- If you have any issues [join my Discord server](https://discord.gg/bREgHCq)
 
 ![Screenshot](https://i.imgur.com/462Snpa.png)
