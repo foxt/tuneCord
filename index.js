@@ -41,6 +41,7 @@ async function thing() {
         state: `👥  ${artist}`,
         timestamps: {
             start: actualStart,
+            end: realEnd,
         },
         largeImageKey: 'itunes',
         largeImageText: `💿  ${album}`,
