@@ -6,7 +6,7 @@
 # tuneCord
 Tells all your Discord friends what you're listening to on iTunes. (Darwin only)
 
-##Installation instructions
+## Installation instructions
 
 1. [Download tuneCord](https://github.com/theLMGN/tuneCord/archive/master.zip)
 2. Extract.
@@ -36,6 +36,8 @@ This 9/10 times, usually means Discord isn't open.
 
 Make sure you're using the desktop version, not the web site.
 
+#### Will this work with the Music app in macOS Catalina?
 
+Yes.
 
 ![Screenshot](https://i.imgur.com/462Snpa.png)
