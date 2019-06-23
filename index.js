@@ -24,13 +24,19 @@ function hmsToSecondsOnly(str) {
 }
 var loggedIn = false
 
+var app = "iTunes" // Catalina music app compatibily
+if (parseInt(require("os").release().split(".")[0]) >= 19) { // Detect if Catalina
+    app = "Music"
+}
+
 async function thing() {
-    var trackName = await runOSA('tell application "iTunes" to get name of current track')
-    var artist = await runOSA('tell application "iTunes" to get artist of current track')
-    var album = await runOSA('tell application "iTunes" to get album of current track')
+
+    var trackName = await runOSA(`tell application "${app}" to get name of current track`)
+    var artist = await runOSA(`tell application "${app}" to get artist of current track`)
+    var album = await runOSA(`tell application "${app}" to get album of current track`)
     
-    var start = await runOSA('tell application "iTunes" to get player position')
-    var end = await runOSA('tell application "iTunes" to get time of current track')
+    var start = await runOSA(`tell application "${app}" to get player position`)
+    var end = await runOSA(`tell application "${app}" to get time of current track`)
     var now = new Number(new Date()) / 1000;
     var actualStart = now - start
     var realEnd = actualStart + hmsToSecondsOnly(end)
@@ -46,8 +52,9 @@ async function thing() {
         largeImageKey: 'itunes',
         largeImageText: `💿  ${album}`,
         smallImageKey: 'logo',
-        smallImageText: 'Tunecord by theLMGN',
+        smallImageText: 'Tunecord by theLMGN (' + app + ')',
         instance: false,
+        type: 2
     });
     loggedIn = true
 }
@@ -57,7 +64,7 @@ rpc.on('ready', async () => {
 })
 async function setActivity() {
 
-    var playing = await runOSA('tell application "iTunes" to get player state')
+    var playing = await runOSA(`tell application "${app}" to get player state`)
     if (playing == "playing") { 
         if (!loggedIn) {
             rpc.login("404277856525352974").catch(console.error);
